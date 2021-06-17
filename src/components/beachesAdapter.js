@@ -1,4 +1,5 @@
 class BeachesAdapter {
+
     constructor(baseURL){
         this.baseBeachURL = `${baseURL}/api/v1/beaches`
     }
@@ -9,7 +10,7 @@ class BeachesAdapter {
         .then(beaches => { 
             beaches.forEach(beach => {
                 const b = new Beach(beach)
-                b.render ()
+                b.addToDom()
             })
         })
         .catch(err => console.error(err))
@@ -61,7 +62,7 @@ class BeachesAdapter {
           console.log("Created not saved", info)
           if (info.status === 201){
              const b = new Beach(info.beach)
-             b.render
+             b.addToDom()
           } else {
               alert(info.errors)
           }

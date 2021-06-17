@@ -4,10 +4,10 @@ class Comment {
 
     constructor({id, content, beach_id}){
         this.id = id
-        this.content
+        this.content - content
         this.beach_id = beach_id
 
-        Product.all.push(this)
+        Comment.all.push(this)
     }
 
     render(){
