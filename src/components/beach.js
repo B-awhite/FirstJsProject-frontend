@@ -4,7 +4,7 @@ class Beach {
         this.id = id
         this.name = name
         this.country = country 
-        this.comments = comments.map(c => new Comment(c))
+        this.comments = comments
     }
 
     // render(){

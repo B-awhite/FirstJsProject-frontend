@@ -1,5 +1,7 @@
 let editMode = false
+let commentsArray = false
 const beachesAdapter = new BeachesAdapter("http://localhost:3000")
+const bkgd = document.body.style.backgroundColor = "lightblue"
 
 document.addEventListener("DOMContentLoaded", () => {
     addCreateForm();
