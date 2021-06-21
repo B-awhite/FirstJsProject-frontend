@@ -18,7 +18,7 @@ class BeachesAdapter {
     }
 
     editBeach(editMode, nameInput, countryInput){
-        fetch(`http://localhost:3000/api/v1/beaches/${editMode.dataset.id}`, {
+        fetch(`${this.baseBeachURL}/${editMode.dataset.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -46,7 +46,7 @@ class BeachesAdapter {
     }
 
     createBeach(nameInput, countryInput){
-        fetch("http://localhost:3000/api/v1/beaches", {
+        fetch(this.baseBeachURL, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -73,7 +73,7 @@ class BeachesAdapter {
     }
 
     deleteBeach(li){
-        fetch(`http://localhost:3000/api/v1/beaches/${li.dataset.id}`, {
+        fetch(`${this.baseBeachURL}/${li.dataset.id}`, {
             method: "DELETE"
         })
         .then(resp => {
